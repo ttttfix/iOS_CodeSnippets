@@ -9,13 +9,16 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>ExtendImplementationOfNonVoidMethodWithSingleArgument([&lt;#targetClass#&gt; class], @selector(&lt;#targetSelector#&gt;), &lt;#argumentType#&gt;, &lt;#returnType#&gt;, ^&lt;#returnType#&gt;(&lt;#targetClass#&gt; *selfObject, &lt;#argumentType#&gt; firstArgv, &lt;#returnType#&gt; originReturnValue) {
+	<string>#import "ZedUI/ZedRuntime.h"
+ExtendImplementationOfNonVoidMethodWithSingleArgument([&lt;#targetClass#&gt; class], @selector(&lt;#targetSelector#&gt;), &lt;#argumentType#&gt;, &lt;#returnType#&gt;, ^&lt;#returnType#&gt;(&lt;#targetClass#&gt; *selfObject, &lt;#argumentType#&gt; firstArgv, &lt;#returnType#&gt; originReturnValue) {
         return &lt;#custom extend#&gt;;
     });</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>D96EBFBE-EA27-4210-B9D4-8172B875559A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Extend Implementation Of Non Void Return Single Argument</string>
 	<key>IDECodeSnippetUserSnippet</key>

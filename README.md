@@ -1,4 +1,7 @@
-# qmui-ios-codesnippets 
+# ios-codesnippets 
+
+## Fork自 qmui-ios-codesnippets 
+
 *qmui-ios-codesnippets* 是一个 QMUI 团队日常工作中整理出来的用于 Xcode 的 iOS 通用代码片段集，其中也包含若干专用于 QMUI for iOS 框架的代码片段。
 
 整理这个代码片段集的初衷有以下几点：
@@ -18,12 +21,12 @@ cd ~/Library/Developer/Xcode/UserData/CodeSnippets
 ```
 CodeSnippets 目录为空:
 ```bash
-git clone https://github.com/QMUI/QMUI_iOS_CodeSnippets.git ./
+git clone https://github.com/ttttfix/iOS_CodeSnippets.git ./
 ```
 CodeSnippets 目录不为空:
 ```bash
 git init .
-git remote add origin https://github.com/QMUI/QMUI_iOS_CodeSnippets.git
+git remote add origin https://github.com/ttttfix/iOS_CodeSnippets.git
 git pull origin master 
 ```
 
@@ -32,7 +35,11 @@ git pull origin master
 注意，Xcode 对每一段 Code Snippet 都有规定适用的语言（Objective-C、Objective-C++、Swift、...）和作用域（如 Class 的 Interface 定义内、Class 的 Implementation 内、方法体内、...），所以测试某段 Code Snippet 不生效时请注意你当前是否处于不匹配的位置。
 
 ## 快捷键汇总
-*NSObject*
+
+
+
+### *NSObject*
+
 - `pa` - 定义一个 `assign` 的 property
 - `par` - 定义一个 `assign, readonly` 的 property
 - `pc` - 定义一个 `copy` 的 property
@@ -63,16 +70,16 @@ git pull origin master
 - `extend_return_single_argv` - 用 QMUI 的 `ExtendImplementationOfNonVoidMethodWithSingleArgument()` 修改指定 class 的某个带返回值、带一个参数的方法实现
 - `extend_return_two_argvs` - 用 QMUI 的 `ExtendImplementationOfNonVoidMethodWithTwoArguments()` 修改指定 class 的某个带返回值、带两个参数的方法实现
 
+### *Block*
 
-*Block*
 - `blockParameterInMethod` - 声明一个用于 OC 方法参数的 block
 - `blockParameterInFunction` - 声明一个用于 C 函数参数的 block
 - `blockproperty` - 声明一个用于 property 的 block
 - `blocktypedef` - 用 `typedef` 定义一个 block
 - `blockvar` - 定义一个作为局部变量的 block
 
+### *Method & Function*
 
-*Method & Function*
 - `fnv` - 定义一个返回值为 `void` 的方法
 - `fnv:` - 定义一个返回值为 `void` 且带参数的方法
 - `fnblock` - 定义一个返回值类型为 block 的方法
@@ -81,8 +88,8 @@ git pull origin master
 - `fnv_pan` - 定义一个用于 `UIPanGestureRecognizer` 的回调方法
 - `fnv_tap` - 定义一个用于 `UITapGestureRecognizer` 的回调方法
 
+### *UIView*
 
-*UIView*
 - `setFrame` - 为 `UIView` 设置 `frame`
 - `setFrame_QMUI` - QMUI 使用像素对齐的 `CGRectFlatMake()` 为 `UIView` 设置 `frame`
 - `setFrameX` - QMUI 使用 `CGRectSetX()` 修改 `UIView` 的 `frame.origin.x`
@@ -139,15 +146,10 @@ git pull origin master
 - `setupNavigationItems` - QMUI 重写 `QMUICommonViewController` 里的 `setupNavigationItems` 方法
 - `setupToolbarItems` - QMUI 重写 `QMUICommonViewController` 里的 `setupToolbarItems` 方法
 
-*UIBarButtonItem*
-- `backItem` - 用 QMUI 方法生成一个返回按钮
-- `boldTitleItem` - 用 QMUI 方法生成一个文字加粗的导航栏按钮
-- `closeItem` - 用 QMUI 方法生成一个导航栏上的关闭图标按钮
-- `imageItem` - 用 QMUI 方法生成一个导航栏上的图片按钮
-- `titleItem` - 用 QMUI 方法生成一个导航栏上的文字按钮
 
 
-*Other*
+### *Other*
+
 - `pragma` - 展开一个用于 Xcode 导航的 `#pragma mark -` 宏
 - `log` - 展开 `NSLog(@"xxx")`
 - `osif` - 展开一个 @available(iOS xxx, \*) 的 if 判断
@@ -161,3 +163,4 @@ git pull origin master
 - `__strongSelf` - 将 `weakSelf` 指针改为 `strong` 的 `self` 指针
 - `logCallStackSymbols` - 用 `NSLog` 打出当前的方法调用栈信息
 - `timeConsuming` - 展开一段用 `CACurrentMediaTime()` 来计算方法耗时的代码
+

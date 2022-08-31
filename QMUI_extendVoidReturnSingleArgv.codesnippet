@@ -9,13 +9,16 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>ExtendImplementationOfVoidMethodWithSingleArgument([&lt;#targetClass#&gt; class], @selector(&lt;#targetSelector#&gt;), &lt;#argumentType#&gt;, ^(&lt;#targetClass#&gt; *selfObject, &lt;#argumentType#&gt; firstArgv) {
+	<string>#import "ZedUI/ZedRuntime.h"
+ExtendImplementationOfVoidMethodWithSingleArgument([&lt;#targetClass#&gt; class], @selector(&lt;#targetSelector#&gt;), &lt;#argumentType#&gt;, ^(&lt;#targetClass#&gt; *selfObject, &lt;#argumentType#&gt; firstArgv) {
         &lt;#custom extend#&gt;
     });</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>646E8309-8AE3-4E5B-BBBD-744958FBA30E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Extend Implementation Of Void Return Single Argument</string>
 	<key>IDECodeSnippetUserSnippet</key>
