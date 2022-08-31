@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>request</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSString *)requestUrl {
+    return @"";
+}
+
+- (YppJavaRequestType)javaRequestType {
+    return YppGatewayServiceRequest;
+}
+
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+
+- (NSDictionary *)parameters {
+    return @{};
+}
+
+- (Class)returnType {
+    return &lt;#ReturnClass#&gt;.class;
+}
+
+//subscribe &lt;#ReturnClass#&gt; instance
+- (RACSignal *)startServices {
+    __weak __typeof(self)weakSelf = self;
+    return [RACSignal createSignal:^RACDisposable *(id&lt;RACSubscriber&gt; subscriber) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        [strongSelf proceedWithCompletionBlockWithSuccess:^(NetworkStatusModel *status, id data) {
+            NSError *error;
+            if (status.code != 8000) { //!OCLint
+                error = [NSError errorWithDomain:kYppErrorDomain code:status.code userInfo:@{NSLocalizedFailureReasonErrorKey: status.msg ?: @""}];
+            } else if (![data isKindOfClass:&lt;#ReturnClass#&gt;.class]) {
+                error = [NSError errorWithDomain:kYppErrorDomain code:-1 userInfo:@{NSLocalizedFailureReasonErrorKey: @"返回类型错误"}];
+            }
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                [subscriber sendNext:data];
+                [subscriber sendCompleted];
+            }
+        } failure:^(NetworkErrorModel *error) {
+            [subscriber sendError: [NSError errorWithDomain:kYppErrorDomain code:-1 userInfo:@{NSLocalizedFailureReasonErrorKey: @"系统走神儿了，稍等一下哦~"}]];
+        }];
+        return [RACDisposable disposableWithBlock:^{}];
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CBEEAF07-2266-4DA6-820A-2AFC4411A207</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>YPPRequest</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
